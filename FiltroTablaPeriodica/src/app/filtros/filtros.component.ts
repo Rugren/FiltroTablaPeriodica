@@ -49,7 +49,7 @@ export class FiltrosComponent implements AfterViewInit {
   /* Para anunciar el cambio de estado de clasificación de los filtros */
   announceSortChange(sortState: Sort) {
 
-    /* Creada para que en lugar de aparecer "Clasificación asc" o "Clasificación desc" 
+    /* Creado por mi para que en lugar de aparecer por defecto "asc" o "desc" 
     aparezca lo que nosotros queramos que ponga.*/
     let directionTextoModificado: string;
 
