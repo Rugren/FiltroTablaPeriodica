@@ -7,7 +7,7 @@ Además de por orden alfabético las letras o palabras (de A-Z y Z-A) del nombre
 
 Solo se podrá probar un filtro a la vez, no varios filtros de filtros realizados.
 
-Proyecto **FiltroCalorias**, realizado en Angular
+Proyecto **FiltroTablaPeriodica**, realizado en Angular
 
 - 1º Para abrir este proyecto debemos tener instalado Angular en nuestro programa editor de código (Ya sea VisualStudioCode o el que utilicemos para correr el programa).
 Para instalar Angular poner comando (en la consola de Windows; Windws + R): npm install -g @angular/cli
