@@ -1,36 +1,42 @@
 <h3>Página de filtros</h3>
 
+<p class="parrafoInicial">Pincha en el título para clasificar u organizar (Se ordenan todos los campos) [Orden ascendente, descendente y sin filtro].</p>
+
 <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
     class="mat-elevation-z8">
 
     <!-- Columna de la Position o número Nº. (Position Column) -->
     <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
-            Nº.
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"
+        class="titulosTabla">
+        ⚫ Nº.
         </th>
         <td mat-cell *matCellDef="let element"> {{element.position}} </td>
     </ng-container>
 
     <!-- Columna del Nombre del elemento químico (Name Column) -->
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
-            Nombre del elemento químico
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"
+        class="titulosTabla">
+        ⚫ Nombre del elemento químico
         </th>
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
 
     <!-- Columna del Peso (Weight Column) -->
     <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight">
-            Peso
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by weight"
+        class="titulosTabla">
+        ⚫ Peso
         </th>
         <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
     </ng-container>
 
     <!-- Columna del Símbolo (Symbol Column) -->
     <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol">
-            Símbolo
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by symbol"
+        class="titulosTabla">
+        ⚫ Símbolo
         </th>
         <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
     </ng-container>
