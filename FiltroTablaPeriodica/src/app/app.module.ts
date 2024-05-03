@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FiltrosComponent } from './filtros/filtros.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { A11yModule } from '@angular/cdk/a11y';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,10 +16,13 @@ import { FiltrosComponent } from './filtros/filtros.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatSortModule,
+    A11yModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })
