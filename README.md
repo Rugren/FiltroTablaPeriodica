@@ -15,7 +15,10 @@ Para instalar Angular poner comando (en la consola de Windows; Windws + R): npm 
 - 2º Luego ejecutar en la consola de comandos la cd + La ruta de la carpeta dónde descarguemos el proyecto. 
 [ Anteriormente ya creamos el proyecto con el comando: 
 ng new FiltroTablaPeriodica --standalone=false
-Después elegimos CSS. ]
+Después elegimos CSS. 
+- Ya creamos un componente llamado "filtros"
+- Instalamos material de Angular (Con comando: npm install @angular/material @angular/cdk) para que funcione (el LiveAnnouncer, MatSort, MatTableDataSource, Sort).
+]
 
 - 3º Ejecutar comando en la consola para abrirlo en nuestro servidor local: ng serve -o
 

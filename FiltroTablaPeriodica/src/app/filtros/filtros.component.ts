@@ -48,9 +48,9 @@ export class FiltrosComponent implements AfterViewInit {
   /* Para anunciar el cambio de estado de clasificación de los filtros */
   announceSortChange(sortState: Sort) {
     if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+      this._liveAnnouncer.announce(`Clasificación ${sortState.direction}`);
     } else {
-      this._liveAnnouncer.announce('Sorting cleared');
+      this._liveAnnouncer.announce('Clasificación, orden o filtro despejado.');
     }
   }
 }
