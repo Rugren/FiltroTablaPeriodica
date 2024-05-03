@@ -10,6 +10,7 @@ export interface PeriodicElement {
   weight: number;
   symbol: string;
 }
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -25,12 +26,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 
 @Component({
-
   selector: 'app-filtros',
   templateUrl: './filtros.component.html',
   styleUrl: './filtros.component.css'
 })
 
+// Modificicaciones funcionales distintas a las del ejemplo: https://material.angular.io/components/sort/overview 
 
 export class FiltrosComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -47,10 +48,23 @@ export class FiltrosComponent implements AfterViewInit {
 
   /* Para anunciar el cambio de estado de clasificación de los filtros */
   announceSortChange(sortState: Sort) {
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Clasificación ${sortState.direction}`);
+
+    /* Creada para que en lugar de aparecer "Clasificación asc" o "Clasificación desc" 
+    aparezca lo que nosotros queramos que ponga.*/
+    let directionTextoModificado: string;
+
+    /* no modificar espacios, puestos así para que coja la coma de ', orden o filtro despejado', 
+    por eso puesto espacios, delante en ' ascendente' y ' descendente' */
+    if (sortState.direction === 'asc') {
+      directionTextoModificado = ' ascendente';
+    } else if (sortState.direction === 'desc') {
+      directionTextoModificado = ' descendente';
     } else {
-      this._liveAnnouncer.announce('Clasificación, orden o filtro despejado.');
+      directionTextoModificado = ', orden o filtro despejado';
     }
+    this._liveAnnouncer.announce(`Clasificación${directionTextoModificado}`);
   }
+
 }
+
+
